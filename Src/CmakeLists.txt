@@ -1,0 +1,125 @@
+
+########################################################################
+## rsjet suite library
+########################################################################
+
+set(RSJET_SUITE_SOURCES
+	${PROJECT_SOURCE_DIR}/Src/RsJetSdrLib.cpp
+	${PROJECT_SOURCE_DIR}/Src/RsDemod.cpp
+	${PROJECT_SOURCE_DIR}/Src/RsJetUsb/Rs_FX3_USB.cpp
+	${PROJECT_SOURCE_DIR}/Src/Streaming.cpp
+
+	${PROJECT_SOURCE_DIR}/Src/SpectrHigh/Rs_FFT.cpp
+	${PROJECT_SOURCE_DIR}/Src/SpectrHigh/SpectrHigh.cpp
+	
+${PROJECT_SOURCE_DIR}/Src/Audio/rtaudio/RtAudio.cpp
+
+${PROJECT_SOURCE_DIR}/Src/demod/util/Timer.cpp
+${PROJECT_SOURCE_DIR}/Src/demod/util/IOThread.cpp
+${PROJECT_SOURCE_DIR}/Src/demod/util/ThreadBlockingQueue.cpp
+
+${PROJECT_SOURCE_DIR}/Src/RsSDR/SDRThread.cpp
+${PROJECT_SOURCE_DIR}/Src/RsSDR/SDRPostThread.cpp
+
+#static
+${PROJECT_SOURCE_DIR}/Src/demod/DemodulatorMgr.cpp
+ ${PROJECT_SOURCE_DIR}/Src/modem/modem.cpp
+ 
+ #analog static 
+ ${PROJECT_SOURCE_DIR}/Src/modem/modemanalog.cpp
+ ${PROJECT_SOURCE_DIR}/Src/modem/analog/ModemAM.cpp
+ ${PROJECT_SOURCE_DIR}/Src/modem/analog/ModemDSB.cpp
+ ${PROJECT_SOURCE_DIR}/Src/modem/analog/ModemFM.cpp
+ ${PROJECT_SOURCE_DIR}/Src/modem/analog/ModemNBFM.cpp
+ ${PROJECT_SOURCE_DIR}/Src/modem/analog/ModemFMStereo.cpp
+ ${PROJECT_SOURCE_DIR}/Src/modem/analog/ModemIQ.cpp
+ ${PROJECT_SOURCE_DIR}/Src/modem/analog/ModemLSB.cpp
+ ${PROJECT_SOURCE_DIR}/Src/modem/analog/ModemUSB.cpp
+ 
+ #digital static
+ ${PROJECT_SOURCE_DIR}/Src/modem/ModemDigital.cpp
+ ${PROJECT_SOURCE_DIR}/Src/modem/digital/ModemGMSK.cpp
+  
+   #Demodulator Thread 
+     ${PROJECT_SOURCE_DIR}/Src/demod/DemodulatorInstance.cpp
+	 ${PROJECT_SOURCE_DIR}/Src/demod/DemodulatorPreThread.cpp
+	 ${PROJECT_SOURCE_DIR}/Src/demod/DemodulatorThread.cpp
+	 ${PROJECT_SOURCE_DIR}/Src/demod/DemodulatorWorkerThread.cpp
+    #Audio Thread
+     ${PROJECT_SOURCE_DIR}/Src/Audio/AudioThread.cpp
+     ${PROJECT_SOURCE_DIR}/Src/Audio/AudioSinkThread.cpp
+)
+
+set(RSJET_SUITE_INCLUDES
+    ${CMAKE_CURRENT_SOURCE_DIR}
+	 ${CYAPI_INCLUDE_DIRS}
+	 ${EXT_INCLUDE_DIRS}
+	 ${PROJECT_SOURCE_DIR}/Src/demod/
+	 ${PROJECT_SOURCE_DIR}/Src/demod/util/
+	 ${PROJECT_SOURCE_DIR}/Src/Audio/
+	 ${PROJECT_SOURCE_DIR}/Src/Audio/rtaudio/
+	 ${PROJECT_SOURCE_DIR}/Src/modem/
+	 ${PROJECT_SOURCE_DIR}/Src/modem/analog/
+	 ${PROJECT_SOURCE_DIR}/Src/RsSDR/
+	 ${PROJECT_SOURCE_DIR}/Src/SpectrHigh/
+	 ${PROJECT_SOURCE_DIR}/Src/RsJet/
+	 ${PROJECT_SOURCE_DIR}/Src/RsJetUSB/
+)	
+
+SET (rsjet_headers
+${PROJECT_SOURCE_DIR}/Src/RsJet/RsJetSuite.h
+${PROJECT_SOURCE_DIR}/Src/RsJetUsb/Rs_FX3_USB.h
+${PROJECT_SOURCE_DIR}/Src/Rsdemod.h
+
+${PROJECT_SOURCE_DIR}/Src/RsSDR/SDRThread.h
+${PROJECT_SOURCE_DIR}/Src/RsSDR/SDRPostThread.h
+
+
+${PROJECT_SOURCE_DIR}/Src/demod/DemodulatorMgr.h
+${PROJECT_SOURCE_DIR}/Src/demod/DemodulatorInstance.h
+${PROJECT_SOURCE_DIR}/Src/demod/DemodulatorPreThread.h
+${PROJECT_SOURCE_DIR}/Src/demod/DemodulatorThread.h
+${PROJECT_SOURCE_DIR}/Src/demod/DemodulatorWorkerThread.h
+
+${PROJECT_SOURCE_DIR}/Src/modem/modem.h
+${PROJECT_SOURCE_DIR}/Src/modem/modemanalog.h
+${PROJECT_SOURCE_DIR}/Src/modem/ModemDigital.h
+)
+
+
+
+include(FeatureSummary)
+include(CMakeDependentOption)
+option(ENABLE_LIBRARY "Enable build library" ON)
+add_feature_info(RsJetSuiteLibrary ENABLE_LIBRARY "The rsjet suite library")
+
+
+SOURCE_GROUP("Audio" REGULAR_EXPRESSION "${PROJECT_SOURCE_DIR}/Src/Audio/${REG_EXT}")
+SOURCE_GROUP("SDR" REGULAR_EXPRESSION "${PROJECT_SOURCE_DIR}/Src/RsSDR/${REG_EXT}")
+SOURCE_GROUP("Demod" REGULAR_EXPRESSION "${PROJECT_SOURCE_DIR}/Src/Demod/${REG_EXT}")
+SOURCE_GROUP("Util" REGULAR_EXPRESSION "${PROJECT_SOURCE_DIR}/Src/Demod/util/${REG_EXT}")
+SOURCE_GROUP("Modem" REGULAR_EXPRESSION "${PROJECT_SOURCE_DIR}/Src/modem/${REG_EXT}")
+SOURCE_GROUP("Analog" REGULAR_EXPRESSION "${PROJECT_SOURCE_DIR}/Src/modem/analog/${REG_EXT}")
+SOURCE_GROUP("Digital" REGULAR_EXPRESSION "${PROJECT_SOURCE_DIR}/Src/modem/digital/${REG_EXT}")
+SOURCE_GROUP("SpectrHigh" REGULAR_EXPRESSION "${PROJECT_SOURCE_DIR}/Src/SpectrHigh/${REG_EXT}")
+
+
+if(ENABLE_LIBRARY)
+ IF (MSVC)
+    ADD_DEFINITIONS(-D__WINDOWS_WASAPI__)  
+	ADD_DEFINITIONS(-D__WINDOWS_DS__)
+ ENDIF (MSVC)
+    
+	set(BINARY_OUTPUT_DIR "${CMAKE_BINARY_DIR}/bin")
+ 	
+	add_library(RsJetSdr SHARED ${RSJET_SUITE_SOURCES} ${rsjet_headers})
+
+	target_link_libraries(RsJetSdr ${USB_LIBRARIES} ${LIQUID_LIBRARIES} dsound.lib  )
+	set_target_properties(RsJetSdr PROPERTIES DEFINE_SYMBOL "_DLL_EXPORTS"
+		 RUNTIME_OUTPUT_DIRECTORY ${BINARY_OUTPUT_DIR})
+
+	target_include_directories(RsJetSdr PUBLIC ${RSJET_SUITE_INCLUDES})
+	
+#	set_property(TARGET RsJetSdr PROPERTY POSITION_INDEPENDENT_CODE TRUE)
+endif()	
+

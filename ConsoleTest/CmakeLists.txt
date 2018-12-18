@@ -1,0 +1,62 @@
+include(FeatureSummary)
+include(CMakeDependentOption)
+option (ENABLE_SFML "Enable build sfml" OFF)
+if (ENABLE_SFML)
+	set(SFML_STATIC_LIBRARIES TRUE)
+	find_package(SFML COMPONENTS system window graphics REQUIRED)
+	ADD_DEFINITIONS(-D_SFML_) 
+endif()
+
+set(CONSOLE_SOURCES
+	 pch.cpp
+     ConsoleTest.cpp
+ )
+
+ set(RSJETCON_INCLUDES
+ ${PROJECT_SOURCE_DIR}/Src/
+ ${PROJECT_SOURCE_DIR}/Src/RsJet/
+ )
+
+include(FeatureSummary)
+include(CMakeDependentOption)
+option (ENABLE_CON "Enable build Console" ON)
+#cmake_dependent_option(ENABLE_CON "Enable build Console" ON)
+add_feature_info(RsJetCon ENABLE_CON "Test Application for RsJet")
+
+if (ENABLE_CON)
+    set(BINARY_OUTPUT_DIR "${CMAKE_BINARY_DIR}/bin")
+
+	   
+
+	  add_executable(RsJetCon ${CONSOLE_SOURCES})
+
+	  target_include_directories(RsJetCon PUBLIC ${RSJETCON_INCLUDES})  
+
+    set_target_properties(RsJetCon PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY ${BINARY_OUTPUT_DIR})
+
+
+
+
+if(ENABLE_SFML)
+	 target_link_libraries(RsJetCon RsJetSdr sfml-graphics sfml-audio)
+else()
+     target_link_libraries(RsJetCon RsJetSdr)
+endif(ENABLE_SFML)
+
+    if (MSVC)
+        set_property(TARGET RsJetCon APPEND PROPERTY LINK_FLAGS  /SUBSYSTEM:CONSOLE )
+    endif(MSVC)
+
+    install(TARGETS RsJetCon DESTINATION bin)
+
+ if (MSVC)
+    add_definitions(/Yu"pch.h")
+   set_source_files_properties("pch.cpp"
+      PROPERTIES COMPILE_FLAGS /Yc"pch.h"
+    )
+ endif(MSVC)
+
+
+endif(ENABLE_CON)
+

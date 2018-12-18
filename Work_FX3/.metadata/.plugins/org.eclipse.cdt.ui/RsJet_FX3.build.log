@@ -1,0 +1,36 @@
+12:00:10 **** Build of configuration Debug for project RsJet_FX3 ****
+cs-make -j4 all 
+'Building target: RsJet_FX3.elf'
+'Invoking: Cross ARM C Linker'
+arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -T "C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_build/fx3_fw/fx3.ld" -nostartfiles -nodefaultlibs -Xlinker --gc-sections -L"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/fx3_debug" -L"C:\Cypress\EZ-USB FX3 SDK\1.3\ARM GCC\/lib/gcc/arm-none-eabi/4.8.1" -L"C:\Cypress\EZ-USB FX3 SDK\1.3\ARM GCC\/arm-none-eabi/lib" -Wl,-Map,"RsJet_FX3.map" -Wl,-d  -Wl,--no-wchar-size-warning -Wl,--entry,CyU3PFirmwareEntry -o "RsJet_FX3.elf"  ./rs_jet/RsJet.o ./rs_jet/Uart_Rs_Jet.o  ./Support.o ./Time.o ./cyfx_gcc_startup.o ./cyfxslfifousbdscr.o ./cyfxtx.o ./fpga.o ./main.o   -lcyu3lpp -lcyfxapi -lcyu3threadx -lc -lgcc
+'Finished building target: RsJet_FX3.elf'
+' '
+cs-make --no-print-directory post-build
+'Generate boot-loadable binary image'
+elf2img.exe -i RsJet_FX3.elf -o RsJet_FX3.img -v
+Note: 256 bytes of interrupt vector code have been removed from the image.
+Endian-ness    : Little
+      Use the "-vectorload yes" option to retain this code.
+Entry point    : 0x4000e004
+
+Program header table offset: 0x00000034
+Program header count       : 3
+Program header entry size  : 0x0020
+Copying data from program header:
+	Addr=0x00000100 Size(words)=0x000008c8 FileSize=0x000008c8 Offset=0x00000100 Flags=0x00000005
+Copying data from program header:
+	Addr=0x40003000 Size(words)=0x00004000 FileSize=0x00004000 Offset=0x00003000 Flags=0x00000005
+Copying data from program header:
+	Addr=0x40013000 Size(words)=0x000031aa FileSize=0x000031aa Offset=0x00013000 Flags=0x00000005
+Copying data from program header:
+	Addr=0x40030000 Size(words)=0x000009d5 FileSize=0x000001dc Offset=0x00020000 Flags=0x00000006
+' '
+'Invoking: Cross ARM GNU Print Size'
+arm-none-eabi-size --format=berkeley "RsJet_FX3.elf"
+   text	   data	    bss	    dec	    hex	filename
+ 125380	   1904	   8148	 135432	  21108	RsJet_FX3.elf
+'Finished building: RsJet_FX3.siz'
+' '
+
+12:00:13 Build Finished (took 2s.359ms)
+

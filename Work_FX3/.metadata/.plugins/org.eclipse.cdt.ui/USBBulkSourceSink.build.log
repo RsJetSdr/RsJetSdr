@@ -1,0 +1,11 @@
+12:15:35 **** Incremental Build of configuration Debug for project USBBulkSourceSink ****
+cs-make -j4 all 
+'Invoking: Cross ARM GNU Print Size'
+arm-none-eabi-size --format=berkeley "USBBulkSourceSink.elf"
+   text	   data	    bss	    dec	    hex	filename
+ 125380	   1904	   8148	 135432	  21108	USBBulkSourceSink.elf
+'Finished building: USBBulkSourceSink.siz'
+' '
+
+12:15:36 Build Finished (took 360ms)
+

@@ -1,0 +1,118 @@
+Archive Project report for D_PR_USB30_V1
+Tue Dec 11 02:02:38 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Tue Dec 11 02:02:38 2018 ;
+; Revision Name          ; D_PR_USB30_V1                         ;
+; Top-level Entity Name  ; RS_FX3                                ;
+; Family                 ; Cyclone IV E                          ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory D:/RsjetSuite/FPGA/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'D:/RsjetSuite/FPGA/D_PR_USB30_V12.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'D_PR_USB30_V1.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/18.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 4911 megabytes
+    Info: Processing ended: Tue Dec 11 02:02:38 2018
+    Info: Elapsed time: 00:00:48
+    Info: Total CPU time (on all processors): 00:00:47
+
+
++---------------------------------------+
+; Files Archived                        ;
++---------------------------------------+
+; File Name                             ;
++---------------------------------------+
+; ADC_LIB/dc_offset_correct.v           ;
+; ADC_LIB/derandomizer.v                ;
+; assignment_defaults.qdf               ;
+; D_PR_USB30_V1.qsf                     ;
+; D_PR_USB30_V1_assignment_defaults.qdf ;
+; D_PR_USB30_V12.qpf                    ;
+; ddc_fifo.v                            ;
+; ddc_lib/acc.v                         ;
+; ddc_lib/add2_and_clip.v               ;
+; ddc_lib/add2_and_clip_reg.v           ;
+; ddc_lib/cic_dec_shifter.v             ;
+; ddc_lib/cic_decim.v                   ;
+; ddc_lib/cic_strober.v                 ;
+; ddc_lib/clip.v                        ;
+; ddc_lib/clip_reg.v                    ;
+; ddc_lib/cordic_stage.v                ;
+; ddc_lib/cordic_z24.v                  ;
+; ddc_lib/ddc_chain.v                   ;
+; ddc_lib/hb_dec.v                      ;
+; ddc_lib/MULT_MACRO.v                  ;
+; ddc_lib/round.v                       ;
+; ddc_lib/round_sd.v                    ;
+; ddc_lib/sign_extend.v                 ;
+; ddc_lib/small_hb_dec.v                ;
+; ddc_lib/srl.v                         ;
+; ddc_lib/SRL16E.v                      ;
+; ddr.v                                 ;
+; fifo_ddc.qip                          ;
+; fifo_ddc.v                            ;
+; fifo_ddc_bb.v                         ;
+; Low_LIB/adc_Spi.v                     ;
+; Low_LIB/atn_Spi.v                     ;
+; Low_LIB/spi_master.vhd                ;
+; Low_LIB/usbrx_spi.vhd                 ;
+; pll.ppf                               ;
+; pll.qip                               ;
+; pll.v                                 ;
+; reset_generator.v                     ;
+; RS_FX3.sdc                            ;
+; RS_FX3.v                              ;
+; sel_bus.v                             ;
+; setting_reg.v                         ;
+; usbwriter.v                           ;
++---------------------------------------+
+
+

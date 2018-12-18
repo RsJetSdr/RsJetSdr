@@ -1,0 +1,114 @@
+Restore Archived Project report for D_PR_USB30_V1
+Fri Sep 28 12:53:09 2018
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Fri Sep 28 12:53:09 2018 ;
+; Revision Name                   ; D_PR_USB30_V1                         ;
+; Top-level Entity Name           ; RS_FX3                                ;
+; Family                          ; Cyclone IV E                          ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'D:/Rs_Jet_FX3/FPGA/D_PR_USB30_V1/D_PR_USB30_V1_tmp_archive.qar' into the 'D:/RsJetSuite/FPGA' directory
+Info: Generated report 'D_PR_USB30_V1.restore.rpt'
+
+
++---------------------------------+
+; Files Restored                  ;
++---------------------------------+
+; File Name                       ;
++---------------------------------+
+; qar_info.json                   ;
+; ADC_LIB/dc_offset_correct.v     ;
+; ADC_LIB/derandomizer.v          ;
+; D_PR_USB30_V1.qpf               ;
+; D_PR_USB30_V1.qsf               ;
+; Low_LIB/adc_Spi.v               ;
+; Low_LIB/atn_Spi.v               ;
+; Low_LIB/spi_master.vhd          ;
+; Low_LIB/usbrx_spi.vhd           ;
+; RS_FX3.sdc                      ;
+; RS_FX3.v                        ;
+; ddc_fifo.v                      ;
+; ddc_lib/MULT_MACRO.v            ;
+; ddc_lib/SRL16E.v                ;
+; ddc_lib/acc.v                   ;
+; ddc_lib/add2_and_clip.v         ;
+; ddc_lib/add2_and_clip_reg.v     ;
+; ddc_lib/cic_dec_shifter.v       ;
+; ddc_lib/cic_decim.v             ;
+; ddc_lib/cic_strober.v           ;
+; ddc_lib/clip.v                  ;
+; ddc_lib/clip_reg.v              ;
+; ddc_lib/cordic_stage.v          ;
+; ddc_lib/cordic_z24.v            ;
+; ddc_lib/ddc_chain.v             ;
+; ddc_lib/hb_dec.v                ;
+; ddc_lib/round.v                 ;
+; ddc_lib/round_sd.v              ;
+; ddc_lib/sign_extend.v           ;
+; ddc_lib/small_hb_dec.v          ;
+; ddc_lib/srl.v                   ;
+; ddr.v                           ;
+; fifo_ddc.qip                    ;
+; fifo_ddc.v                      ;
+; fifo_ddc_bb.v                   ;
+; output_files/END_BURST.stp      ;
+; output_files/START_BURST.stp    ;
+; output_files/TestFIFO_BURST.stp ;
+; output_files/loadjtag.cdf       ;
+; pll.qip                         ;
+; pll.v                           ;
+; reset_generator.v               ;
+; sel_bus.v                       ;
+; setting_reg.v                   ;
+; usbwriter.v                     ;
+; assignment_defaults.qdf         ;
++---------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

@@ -1,0 +1,8 @@
+11:31:00 **** Build of configuration Debug for project Presel_ARM ****
+make -j4 all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "Presel_arm.elf"
+   text	   data	    bss	    dec	    hex	filename
+  11672	    144	   3344	  15160	   3b38	Presel_arm.elf
+Finished building: Presel_arm.siz
+ 

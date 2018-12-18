@@ -1,0 +1,54 @@
+Quartus Prime Archive log --	D:/RsjetSuite/FPGA/D_PR_USB30_V12.qarlog
+
+Archive:	D:/RsjetSuite/FPGA/D_PR_USB30_V12.qar
+Date:		Tue Dec 11 02:02:37 2018
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/RsjetSuite/FPGA/ADC_LIB/dc_offset_correct.v
+D:/RsjetSuite/FPGA/ADC_LIB/derandomizer.v
+D:/RsjetSuite/FPGA/D_PR_USB30_V1.qsf
+D:/RsjetSuite/FPGA/D_PR_USB30_V12.qpf
+D:/RsjetSuite/FPGA/D_PR_USB30_V1_assignment_defaults.qdf
+D:/RsjetSuite/FPGA/Low_LIB/adc_Spi.v
+D:/RsjetSuite/FPGA/Low_LIB/atn_Spi.v
+D:/RsjetSuite/FPGA/Low_LIB/spi_master.vhd
+D:/RsjetSuite/FPGA/Low_LIB/usbrx_spi.vhd
+D:/RsjetSuite/FPGA/RS_FX3.sdc
+D:/RsjetSuite/FPGA/RS_FX3.v
+D:/RsjetSuite/FPGA/assignment_defaults.qdf
+D:/RsjetSuite/FPGA/ddc_fifo.v
+D:/RsjetSuite/FPGA/ddc_lib/MULT_MACRO.v
+D:/RsjetSuite/FPGA/ddc_lib/SRL16E.v
+D:/RsjetSuite/FPGA/ddc_lib/acc.v
+D:/RsjetSuite/FPGA/ddc_lib/add2_and_clip.v
+D:/RsjetSuite/FPGA/ddc_lib/add2_and_clip_reg.v
+D:/RsjetSuite/FPGA/ddc_lib/cic_dec_shifter.v
+D:/RsjetSuite/FPGA/ddc_lib/cic_decim.v
+D:/RsjetSuite/FPGA/ddc_lib/cic_strober.v
+D:/RsjetSuite/FPGA/ddc_lib/clip.v
+D:/RsjetSuite/FPGA/ddc_lib/clip_reg.v
+D:/RsjetSuite/FPGA/ddc_lib/cordic_stage.v
+D:/RsjetSuite/FPGA/ddc_lib/cordic_z24.v
+D:/RsjetSuite/FPGA/ddc_lib/ddc_chain.v
+D:/RsjetSuite/FPGA/ddc_lib/hb_dec.v
+D:/RsjetSuite/FPGA/ddc_lib/round.v
+D:/RsjetSuite/FPGA/ddc_lib/round_sd.v
+D:/RsjetSuite/FPGA/ddc_lib/sign_extend.v
+D:/RsjetSuite/FPGA/ddc_lib/small_hb_dec.v
+D:/RsjetSuite/FPGA/ddc_lib/srl.v
+D:/RsjetSuite/FPGA/ddr.v
+D:/RsjetSuite/FPGA/fifo_ddc.qip
+D:/RsjetSuite/FPGA/fifo_ddc.v
+D:/RsjetSuite/FPGA/fifo_ddc_bb.v
+D:/RsjetSuite/FPGA/pll.ppf
+D:/RsjetSuite/FPGA/pll.qip
+D:/RsjetSuite/FPGA/pll.v
+D:/RsjetSuite/FPGA/reset_generator.v
+D:/RsjetSuite/FPGA/sel_bus.v
+D:/RsjetSuite/FPGA/setting_reg.v
+D:/RsjetSuite/FPGA/usbwriter.v
+	======= Total: 43 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

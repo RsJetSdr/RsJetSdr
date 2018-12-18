@@ -1,0 +1,85 @@
+12:22:17 **** Build of configuration Debug for project RsJetSDR_fx3 ****
+cs-make -j4 all 
+'Building file: ../rs_jet/RsJet.c'
+'Building file: ../rs_jet/Uart_Rs_Jet.c'
+'Building file: ../Support.c'
+'Building file: ../Time.c'
+'Invoking: Cross ARM C Compiler'
+'Invoking: Cross ARM C Compiler'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"rs_jet/RsJet.d" -MT"rs_jet/RsJet.o" -c -o "rs_jet/RsJet.o" "../rs_jet/RsJet.c"
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"rs_jet/Uart_Rs_Jet.d" -MT"rs_jet/Uart_Rs_Jet.o" -c -o "rs_jet/Uart_Rs_Jet.o" "../rs_jet/Uart_Rs_Jet.c"
+arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"Support.d" -MT"Support.o" -c -o "Support.o" "../Support.c"
+arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"Time.d" -MT"Time.o" -c -o "Time.o" "../Time.c"
+'Finished building: ../rs_jet/RsJet.c'
+'Finished building: ../rs_jet/Uart_Rs_Jet.c'
+'Finished building: ../Support.c'
+' '
+' '
+'Finished building: ../Time.c'
+' '
+'Building file: ../cyfx_gcc_startup.S'
+'Building file: ../cyfxslfifousbdscr.c'
+' '
+'Building file: ../cyfxtx.c'
+'Invoking: Cross ARM GNU Assembler'
+'Invoking: Cross ARM C Compiler'
+'Building file: ../fpga.c'
+arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -x assembler-with-cpp -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -MMD -MP -MF"cyfx_gcc_startup.d" -MT"cyfx_gcc_startup.o" -c -o "cyfx_gcc_startup.o" "../cyfx_gcc_startup.S"
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"cyfxslfifousbdscr.d" -MT"cyfxslfifousbdscr.o" -c -o "cyfxslfifousbdscr.o" "../cyfxslfifousbdscr.c"
+arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"cyfxtx.d" -MT"cyfxtx.o" -c -o "cyfxtx.o" "../cyfxtx.c"
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"fpga.d" -MT"fpga.o" -c -o "fpga.o" "../fpga.c"
+'Finished building: ../cyfx_gcc_startup.S'
+'Finished building: ../cyfxslfifousbdscr.c'
+../fpga.c: In function 'CyFxConfigFpgaApplnStart':
+../fpga.c:176:5: warning: implicit declaration of function 'CheckStatus' [-Wimplicit-function-declaration]
+     CheckStatus(CyU3PSetEpConfig(CY_FX_EP_PRODUCER, &epCfg));
+     ^
+' '
+' '
+'Building file: ../main.c'
+'Invoking: Cross ARM C Compiler'
+'Finished building: ../cyfxtx.c'
+arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+'Finished building: ../fpga.c'
+' '
+' '
+'Finished building: ../main.c'
+' '
+'Building target: RsJetSDR_fx3.elf'
+'Invoking: Cross ARM C Linker'
+arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -T "C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_build/fx3_fw/fx3.ld" -nostartfiles -nodefaultlibs -Xlinker --gc-sections -L"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/fx3_debug" -L"C:\Cypress\EZ-USB FX3 SDK\1.3\ARM GCC\/lib/gcc/arm-none-eabi/4.8.1" -L"C:\Cypress\EZ-USB FX3 SDK\1.3\ARM GCC\/arm-none-eabi/lib" -Wl,-Map,"RsJetSDR_fx3.map" -Wl,-d  -Wl,--no-wchar-size-warning -Wl,--entry,CyU3PFirmwareEntry -o "RsJetSDR_fx3.elf"  ./rs_jet/RsJet.o ./rs_jet/Uart_Rs_Jet.o  ./Support.o ./Time.o ./cyfx_gcc_startup.o ./cyfxslfifousbdscr.o ./cyfxtx.o ./fpga.o ./main.o   -lcyu3lpp -lcyfxapi -lcyu3threadx -lc -lgcc
+'Finished building target: RsJetSDR_fx3.elf'
+' '
+cs-make --no-print-directory post-build
+'Generate boot-loadable binary image'
+elf2img.exe -i RsJetSDR_fx3.elf -o RsJetSDR_fx3.img -v
+Endian-ness    : Little
+Entry point    : 0x4000e004
+Note: 256 bytes of interrupt vector code have been removed from the image.
+Program header table offset: 0x00000034
+      Use the "-vectorload yes" option to retain this code.
+Program header count       : 3
+
+Program header entry size  : 0x0020
+Copying data from program header:
+	Addr=0x00000100 Size(words)=0x000008c8 FileSize=0x000008c8 Offset=0x00000100 Flags=0x00000005
+Copying data from program header:
+	Addr=0x40003000 Size(words)=0x00004000 FileSize=0x00004000 Offset=0x00003000 Flags=0x00000005
+Copying data from program header:
+	Addr=0x40013000 Size(words)=0x000031aa FileSize=0x000031aa Offset=0x00013000 Flags=0x00000005
+Copying data from program header:
+	Addr=0x40030000 Size(words)=0x000009d5 FileSize=0x000001dc Offset=0x00020000 Flags=0x00000006
+' '
+'Invoking: Cross ARM GNU Print Size'
+arm-none-eabi-size --format=berkeley "RsJetSDR_fx3.elf"
+   text	   data	    bss	    dec	    hex	filename
+ 125380	   1904	   8148	 135432	  21108	RsJetSDR_fx3.elf
+'Finished building: RsJetSDR_fx3.siz'
+' '
+
+12:22:21 Build Finished (took 4s.206ms)
+
