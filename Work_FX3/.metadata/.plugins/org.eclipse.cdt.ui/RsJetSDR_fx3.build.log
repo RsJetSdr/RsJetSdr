@@ -1,4 +1,4 @@
-12:22:17 **** Build of configuration Debug for project RsJetSDR_fx3 ****
+12:55:32 **** Build of configuration Debug for project RsJetSDR_fx3 ****
 cs-make -j4 all 
 'Building file: ../rs_jet/RsJet.c'
 'Building file: ../rs_jet/Uart_Rs_Jet.c'
@@ -13,24 +13,24 @@ arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=
 arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"Support.d" -MT"Support.o" -c -o "Support.o" "../Support.c"
 arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"Time.d" -MT"Time.o" -c -o "Time.o" "../Time.c"
 'Finished building: ../rs_jet/RsJet.c'
-'Finished building: ../rs_jet/Uart_Rs_Jet.c'
 'Finished building: ../Support.c'
-' '
-' '
+'Finished building: ../rs_jet/Uart_Rs_Jet.c'
 'Finished building: ../Time.c'
+' '
+' '
+' '
 ' '
 'Building file: ../cyfx_gcc_startup.S'
 'Building file: ../cyfxslfifousbdscr.c'
-' '
 'Building file: ../cyfxtx.c'
+'Building file: ../fpga.c'
 'Invoking: Cross ARM GNU Assembler'
 'Invoking: Cross ARM C Compiler'
-'Building file: ../fpga.c'
+'Invoking: Cross ARM C Compiler'
 arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -x assembler-with-cpp -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -MMD -MP -MF"cyfx_gcc_startup.d" -MT"cyfx_gcc_startup.o" -c -o "cyfx_gcc_startup.o" "../cyfx_gcc_startup.S"
 'Invoking: Cross ARM C Compiler'
 arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"cyfxslfifousbdscr.d" -MT"cyfxslfifousbdscr.o" -c -o "cyfxslfifousbdscr.o" "../cyfxslfifousbdscr.c"
 arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"cyfxtx.d" -MT"cyfxtx.o" -c -o "cyfxtx.o" "../cyfxtx.c"
-'Invoking: Cross ARM C Compiler'
 arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"fpga.d" -MT"fpga.o" -c -o "fpga.o" "../fpga.c"
 'Finished building: ../cyfx_gcc_startup.S'
 'Finished building: ../cyfxslfifousbdscr.c'
@@ -40,12 +40,12 @@ arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=
      ^
 ' '
 ' '
-'Building file: ../main.c'
-'Invoking: Cross ARM C Compiler'
 'Finished building: ../cyfxtx.c'
-arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
-'Finished building: ../fpga.c'
+'Building file: ../main.c'
 ' '
+'Finished building: ../fpga.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=arm926ej-s -marm -mthumb-interwork -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D__CYU3P_TX__=1 -I"C:\Cypress\EZ-USB FX3 SDK\1.3\/fw_lib/1_3_3/inc" -I"..\." -std=gnu11 -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
 ' '
 'Finished building: ../main.c'
 ' '
@@ -58,12 +58,12 @@ cs-make --no-print-directory post-build
 'Generate boot-loadable binary image'
 elf2img.exe -i RsJetSDR_fx3.elf -o RsJetSDR_fx3.img -v
 Endian-ness    : Little
-Entry point    : 0x4000e004
 Note: 256 bytes of interrupt vector code have been removed from the image.
-Program header table offset: 0x00000034
+Entry point    : 0x4000e004
       Use the "-vectorload yes" option to retain this code.
-Program header count       : 3
+Program header table offset: 0x00000034
 
+Program header count       : 3
 Program header entry size  : 0x0020
 Copying data from program header:
 	Addr=0x00000100 Size(words)=0x000008c8 FileSize=0x000008c8 Offset=0x00000100 Flags=0x00000005
@@ -81,5 +81,5 @@ arm-none-eabi-size --format=berkeley "RsJetSDR_fx3.elf"
 'Finished building: RsJetSDR_fx3.siz'
 ' '
 
-12:22:21 Build Finished (took 4s.206ms)
+12:55:36 Build Finished (took 4s.279ms)
 

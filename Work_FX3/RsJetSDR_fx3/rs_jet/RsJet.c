@@ -150,7 +150,7 @@ while(pnt_TailCmd == pnt_HeadCmd){
 	Set_Freq_Attn(&mFreq_Attn); //100 Us
 
     //Delay Next Task
-	for(Time=0;(Time<((_100us *5)/3) ) ;Time++){
+	for(Time=0;(Time<((_100us *2)) ) ;Time++){
 			   if(pnt_TailCmd != pnt_HeadCmd)
 				   	   	   	   	   	   	   break;
 	 }
